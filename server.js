@@ -6,6 +6,7 @@ const rowdy = require('rowdy-logger')
 const morgan = require('morgan')
 const cors = require('cors')
 const passport = require('passport')
+const mongoose = require("mongoose")
 
 // Variables
 const app = express()
@@ -28,6 +29,8 @@ app.use('/exampleResource', require('./controllers/exampleResource'))
 app.get('/', (req, res) => {
     res.json({ msg: 'Hello world!' })
 })
+
+// mongoose.connect("")
 
 // Listen!
 app.listen(PORT, () => {
