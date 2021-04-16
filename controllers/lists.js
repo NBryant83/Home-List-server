@@ -8,6 +8,7 @@ require("dotenv").config();
 // GET all from /lists
 router.get("/", async (req, res) => {
   const lists = await List.find({})
+  console.log(lists)
   res.json(lists)
 } )
 

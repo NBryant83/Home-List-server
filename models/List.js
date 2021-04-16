@@ -4,7 +4,7 @@ const { Item, itemSchema } = require("../models/Item")
 const listSchema = new mongoose.Schema({
   title: {
       type: String,
-      required: true,
+      required: false,
       unique: true,
   }, 
 
