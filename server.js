@@ -23,14 +23,15 @@ app.use(passport.initialize())
 
 // Controllers
 app.use('/auth', require('./controllers/authController'))
-app.use('/exampleResource', require('./controllers/exampleResource'))
+app.use("/templates", require("./controllers/templates"))
+app.use("/lists", require("./controllers/lists"))
+// app.use('/exampleResource', require('./controllers/exampleResource'))
 
 // Routes
 app.get('/', (req, res) => {
-    res.json({ msg: 'Hello world!' })
+    res.json({ msg: 'Hello world for the server!' })
 })
 
-// mongoose.connect("")
 
 // Listen!
 app.listen(PORT, () => {

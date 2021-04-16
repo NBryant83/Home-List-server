@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { Item, itemSchema } = require("../models/Item")
 
 const listSchema = new mongoose.Schema({
   title: {
@@ -10,7 +11,9 @@ const listSchema = new mongoose.Schema({
   items: [itemSchema]
 });
 
-const List = mongoose.model("List", listSchema);
+const List = mongoose.model("list", listSchema);
 
-module.exports = List;
-module.exports = listSchema;
+module.exports = {
+  List,
+  listSchema
+}
